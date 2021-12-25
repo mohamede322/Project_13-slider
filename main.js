@@ -16,6 +16,9 @@ function slide() {
     counter++
     if (counter === images.length) {
         counter = 0
+        imagesContainer.style.transition = "none"
+    }else {
+        imagesContainer.style.transition = "0.5s ease-in-out"
     }
     imagesContainer.style.transform = `translateX(-${width * counter}px)`
     console.log(counter)
